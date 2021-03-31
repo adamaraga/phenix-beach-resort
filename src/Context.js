@@ -153,7 +153,7 @@ const RoomContext = React.createContext();
      }
 
     render() {
-        console.log(this.state, 'rosdjkasoms')
+        
         return (
             <RoomContext.Provider 
             value={{

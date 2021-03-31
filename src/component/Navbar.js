@@ -21,7 +21,7 @@ function Navbar() {
         }
 
     const { pathname } = useLocation();
-    console.log(pathname, 'djdfjdn')
+    
         
     return (
         <div>

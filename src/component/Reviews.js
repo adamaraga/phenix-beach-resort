@@ -6,7 +6,7 @@ import { FiChevronRight, FiChevronLeft } from 'react-icons/fi'
 import { FaQuoteRight } from 'react-icons/fa'
 
 function Reviews() {
-    const [people, setPeople] = useState(data)
+    const [people] = useState(data)
   const [index, setIndex] = React.useState(0)
 
   const nextSlide = () => {
@@ -41,7 +41,7 @@ function Reviews() {
     return () => {
       clearInterval(slider)
     }
-  }, [index])
+  }, [index, people.length])
 
     return (
         <div className='review'>
