@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #1f375d;
+  --primaryColor: #0d4f88;
   --secondaryColor: #0c4c8a;
   --tertiaryColor: #1474d4;
   --mainWhite: #fff;
@@ -66,18 +66,19 @@ h6 {
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
   color: white;
-  background: var(--secondaryColor);
+  background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
-  border: 3px solid var(--secondaryColor);
+  border: 3px solid var(--primaryColor);
   transition: var(--mainTransition);
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 2px;
   position: relative;
+  box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5); 
 }
 .btn-primary:hover {
   background: transparent;
-  color: #1474d4;
+  color: var(--tertiaryColor);
   border: 3px solid var(--primaryColor);
 }
 .loading {
@@ -104,22 +105,22 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   /* background: var(--offWhite); */
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
   z-index: 2000;
 }
 .nav-header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
-  
+  position: relative;
   
 }
 .nav-btn {
-  background: var(--mainWhite);
-  border: 1.7px solid var(--mainWhite);
+  background: transparent;
+  border: transparent;
   height: 45px;
   width: 45px;
   cursor: pointer;
@@ -130,12 +131,13 @@ h6 {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 6px;
-  left: 22px;
+  justify-self: flex-end;
+  
+  left: 10vw;
 }
 .nav-icon {
   font-size: 1.5rem;
-  /* color: var(--secondaryColor); */
+  color: white;
 }
 .nav-links {
 
@@ -163,13 +165,14 @@ h6 {
 .side-bar {
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 62px;
   background: rgba(0, 0, 0, 0.95);
   height: 100vh;
   width: 100%;
   clip-path: circle(100px at 90% -20%);
   -webkit-clip-path: circle(100px at 90% -20%);
   transition: all 1s ease-out;
+  border-top: 1px solid white;
 }
 
 .side-bar ul {
@@ -180,9 +183,9 @@ h6 {
 }
 
 .side-bar li {
-  margin: 20px 0;
-  width: 100%;
-  padding: 15px;
+  margin: 3.5vh 0;
+  width: 50%;
+  padding: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,11 +194,11 @@ h6 {
 
 .side-bar li:hover {
   background-color: white;
-  
+  border-radius: 2px;
 }
 
 .side-bar li:hover a {
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
 }
 
 .side-bar a {
@@ -203,7 +206,10 @@ h6 {
   text-decoration: none;
   color: white;
   text-transform: capitalize;
- 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* margin: 40px 0;
   padding: 5px 0;
   width: 100%; */
@@ -217,8 +223,8 @@ h6 {
 
 
 .nav-links a:hover {
-  color: rgb(161, 161, 161);
-  border: 2px solid white;
+ 
+  border-bottom: 2px solid white;
 }
 
 .show-nav {
@@ -229,30 +235,33 @@ h6 {
 
 
 .logo {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 3.12%, rgba(255, 255, 255) 15.62%, rgba(255, 255, 255) 64.05%, rgba(255, 255, 255) 85.76%, rgba(255, 255, 255, 0.29) 100%);
-  border-radius: 20px;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 3.12%, rgba(255, 255, 255) 15.62%, rgba(255, 255, 255) 64.05%, rgba(255, 255, 255) 85.76%, rgba(255, 255, 255, 0.29) 100%); */
+  /* background-color: white; */
+  border-radius: 2px;
   height: 43px;
-  width: 300px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 8px;
+  /* position: relative;
+  top: 8px; */
   align-self: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  border: 2px solid white;
   
   
 }
 
 .logo a {
-  color: var(--secondaryColor);
+  /* color: var(--secondaryColor); */
+  color: white;
   text-decoration: none;
 
   
   font-weight: 530;
   text-transform: capitalize;
   letter-spacing: 0.5px;
-  font-family: 'Lobster', cursive;
+  font-family: 'EB Garamond', serif;
   font-size: 1.2rem;
 }
 
@@ -262,7 +271,25 @@ h6 {
   height: 30px;
 }
 
+@media screen and (min-width: 330px) {
+  .nav-btn {
+    left: 20vw
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .nav-btn {
+    left: 25vw
+  }
+}
+
 @media screen and (min-width: 400px) {
+ .logo {
+   margin: 0 auto;
+ }
+ .nav-btn {
+   left: 10px
+ }
   .logo a {
     font-size: 1.5rem;
   }
@@ -303,14 +330,18 @@ h6 {
     margin-left: auto;
     justify-content: flex-end;
   }
+
+  .logo {
+    padding: 0 25px;
+  }
 }
 /* end of navbar */
 /* Hero */
 .defaultHero,
 .roomsHero {
   /* min-height: calc(100vh - 66px); */
-  min-height:120vh;
-  background: url("./images/landscapeHome.jpg") center/cover no-repeat;
+  min-height:110vh;
+  background: url("./images/landscapeHome1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +363,7 @@ h6 {
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
-  margin-top: 0px;
+  margin-top: 50px;
   border-radius: 3px;
 }
 .banner h1 {
@@ -512,6 +543,7 @@ h6 {
   border-radius: 2px;
   transition: var(--mainTransition);
   box-shadow: var(--lightShadow);
+  overflow: hidden;
 }
 
 /* .img-container:hover {
@@ -538,6 +570,7 @@ h6 {
   transition: var(--mainTransition);
   border-radius: 2px;
   border-bottom-right-radius: 20px;
+
 }
 .price-top h6 {
   margin-bottom: 0;
@@ -554,12 +587,28 @@ h6 {
   backface-visibility: hidden;
 }
 
+.link-con {
+  background-color: rgba(0, 0, 0, 0.795);
+  position: absolute;
+  top:100%;
+  left: 0%;
+  height: 10px;
+  width: 100%;
+  box-shadow:  0px -0px 30px 40px rgba(0, 0, 0, 0.79);
+  opacity: 0;
+}
+
 /* .img-container:hover img {
   opacity: 0.3;
 } */
 /* .img-container:hover .price-top {
   opacity: 0;
 } */
+
+.room:hover .link-con {
+  opacity: 1;
+}
+
 .room:hover .room-link {
   transform: translate(-50%, -50%) scale(1);
   backface-visibility: hidden;
@@ -756,13 +805,16 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: 0;
 }
 
 .review-title {
-  background-color: rgba(255, 255, 255, 0.957);
+  background-color: white;
   display: flex;
  border-radius: 2px;
   justify-content: center;
+ 
   padding-top: 5px;
   width: 270px;
   margin: 55px 0;
@@ -989,7 +1041,7 @@ margin: 0 auto;
 
 
 .footer-con a {
-  color: var(--tertiaryColor);
+  color: var(--secondaryColor);
   text-decoration: none;
   display: inline-block;
   transition:  var(--mainTransition);

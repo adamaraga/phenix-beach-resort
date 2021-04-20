@@ -4,7 +4,7 @@ import {FaAlignRight} from 'react-icons/fa'
 import {AiOutlineClose} from 'react-icons/ai'
 import {Link} from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 import {useState} from 'react'
 
 
@@ -20,7 +20,8 @@ function Navbar() {
                 })
         }
 
-    const { pathname } = useLocation();
+    // const { pathname } = useLocation();
+    // style={{  border: pathname === '/' && '2px solid white' }}
     
         
     return (
@@ -29,17 +30,17 @@ function Navbar() {
                  <div className="nav-center">
                      <ul className="nav-links">
                          <li>
-                             <Link   style={{  border: pathname === '/' && '2px solid white' }}   to='/'>Home</Link>
+                             <Link     to='/'>Home</Link>
                            
                          </li>
                          <li>
-                             <Link  style={{  border: pathname === '/rooms' && '2px solid white' }}  to='/rooms'>Rooms</Link>
+                             <Link    to='/rooms'>Rooms</Link>
                          </li>
                      </ul>
                      <div className="nav-header">
                          <div className="logo">
                              <Link to='/' >
-                                 <img src={logo} alt="logo" id='logo-img'/>
+                                 {/* <img src={logo} alt="logo" id='logo-img'/> */}
                                  phenix beach resort
                              </Link>
                          </div>
@@ -58,7 +59,7 @@ function Navbar() {
 
                          <li>
                              {/* <Link to='/rooms'>gallary</Link> */}
-                             <Link style={{  border: pathname === '/gallary' && '2px solid white' }} to="/gallary">
+                             <Link  to="/gallary">
                                  gallary
                              </Link>
                          </li>
