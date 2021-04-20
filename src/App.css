@@ -192,10 +192,7 @@ h6 {
   transition: var(--mainTransition);
 }
 
-.side-bar li:hover {
-  background-color: white;
-  border-radius: 2px;
-}
+
 
 .side-bar li:hover a {
   color: var(--primaryColor);
@@ -210,9 +207,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: 40px 0;
-  padding: 5px 0;
-  width: 100%; */
+  transition: var(--mainTransition);
+ 
 }
 
 .open {
@@ -805,12 +801,13 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
   top: 0;
 }
 
-.review-title {
-  background-color: white;
+.review-title-con {
+  
   display: flex;
  border-radius: 2px;
   justify-content: center;
@@ -820,6 +817,14 @@ h6 {
   margin: 55px 0;
   height: 55px;
   margin-bottom: 80px;
+}
+
+.review-title-con h4 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
 .article {
@@ -1017,19 +1022,19 @@ margin: 0 auto;
 
 .footer {
   min-height: 300px;
-  background-color: #1d1d1d;
+  background-color: #27282d;
   display: flex;
   flex-direction: column;
   padding: 50px 20px;
   justify-content: center;
-  margin-top: 50px;
+  
 }
 
 .footer-con {
   width: 100%;
   color: #eee;
   margin-bottom: 50px;
-  line-height: 30px;
+  
   
 }
 
@@ -1050,6 +1055,7 @@ margin: 0 auto;
 
 .footer-con a:hover{
   transform: skewy(5deg) scale(1.05);
+  color: var(--tertiaryColor);
 }
 
 .footer-con h4 {
@@ -1059,7 +1065,7 @@ margin: 0 auto;
 .footer-icon {
   position: relative;
   top: 8px;
-  font-size: 25px;
+  font-size: 20px;
   /* color: var(--secondaryColor); */
 }
 
@@ -1075,6 +1081,7 @@ margin: 0 auto;
 
 .footer-copy p {
   text-transform: capitalize;
+  font-size: 15px;
 }
 
 

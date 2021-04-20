@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../images/logo.svg'
+// import logo from '../images/logo.svg'
 import {FaAlignRight} from 'react-icons/fa'
 import {AiOutlineClose} from 'react-icons/ai'
 import {Link} from 'react-router-dom'

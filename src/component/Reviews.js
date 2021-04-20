@@ -46,7 +46,11 @@ function Reviews() {
     return (
         <div className='review'>
             <div className="review-details">
-                <div className='review-title'><Title title='reviews' /></div>
+                {/* <div className='review-title-con'>
+                  
+                    <h4>review</h4>
+                  
+                </div> */}
                 
                 <div className='section-center-review'>
                     {people.map((person, personIndex) => {
