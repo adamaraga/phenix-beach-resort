@@ -1,6 +1,6 @@
 import React from 'react'
 import data from './ReviewData'
-import Title from './Title'
+
 import { useState, useEffect } from 'react'
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi'
 import { FaQuoteRight } from 'react-icons/fa'
